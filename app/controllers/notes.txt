@@ -1,0 +1,14 @@
+Idead for user auth:
+
+Add the condition (user_id == current_user.id) to all of my Find statements
+Use a before_filter to accomplish the above
+Use the default_scope to append this authentication condition (But I think this will be a pain when I go to write tests).
+
+http://stackoverflow.com/questions/5464319/how-should-i-authenticate-access-to-an-active-record-object
+
+http://bcrypt-ruby.rubyforge.org/
+
+http://www.farbeyondprogramming.com/2011/05/rails-user-authentication-using-has_secure_password/
+
+
+
