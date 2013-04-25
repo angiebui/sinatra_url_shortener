@@ -1,9 +1,26 @@
 .container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+	text-align: center;
+	margin: 0px auto;
+	width: 600px;
+	padding: 20px;
+	border: 2px dotted black;
+	background-color: #87CEEB;
 }
+
+
+.popular {
+	text-align: center;
+	font-family: Georgia;
+}
+
+h1 {
+	font-family: Georgia;
+	color: #FF6347;
+	text-align: center;
+}
+
 th {
-  text-align: left;
+	text-align: left;
 }
+
+

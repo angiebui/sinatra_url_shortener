@@ -1,9 +1,9 @@
-<div class="container">
-  <h1>Skip.ly ♥</h1>
-  <form action="/urls" method="post">
-    <input type="text" placeholder ="Paste your long url here" name="url">
-    <input type="submit" value="Shorten">
-  </form>
+<h1>Skip.ly ♥</h1>
+  <div class="container">
+    <form action="/urls" method="post">
+      <input type="text" placeholder ="Paste your long url here" name="url">
+      <input class="button" type="submit" value="Shorten">
+    </form>
 
   <p><span id="new_url">
     <% if @new_url %>
@@ -13,17 +13,19 @@
         <p><%= @new_url.errors.full_messages.first %></p>
       <% end %>
     <% end %>
-  </span></p>
+  </span></p><br>
+</div>
 
-
+<div class="popular">
   <h5>Most Popular:</h5>
-  <ul list-style:none >
-    <% @url.each do |url| %>
-        <li><a href="/<%= url.short_url%>" target="_blank"> skip.ly/<%= url.short_url%></a>
-          <span id="count"><%= url.click_count %></span></li>
-      <% end %>
-  </ul>
-    </div>
+    <span><% @url.each do |url| %>
+      <a href="/<%= url.short_url%>" target="_blank"> skip.ly/<%= url.short_url%></a>
+      <%= url.click_count %><br>
+    <% end %></span>
+</div>
+
+
+
 
 
 
