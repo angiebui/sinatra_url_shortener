@@ -8,21 +8,23 @@
   <p><span id="new_url">
     <% if @new_url %>
       <% if @new_url.valid? %>
-        <p>This is your shortened url: <a href="/<%= @new_url.short_url%>"> skip.ly/<%= @new_url.short_url%></a></p>
+        <p>This is your shortened url: <a href="/<%= @new_url.short_url%>" target="_blank"> skip.ly/<%= @new_url.short_url%></a></p>
       <% else %>
         <p><%= @new_url.errors.full_messages.first %></p>
       <% end %>
     <% end %>
   </span></p>
 
+
   <h5>Most Popular:</h5>
-  <ol>
+  <ul list-style:none >
     <% @url.each do |url| %>
-        <li><a href="/<%= url.short_url%>"> skip.ly/<%= url.short_url%></a>
+        <li><a href="/<%= url.short_url%>" target="_blank"> skip.ly/<%= url.short_url%></a>
           <span id="count"><%= url.click_count %></span></li>
       <% end %>
-  </ol>
-</div>
+  </ul>
+    </div>
+
 
 
 
