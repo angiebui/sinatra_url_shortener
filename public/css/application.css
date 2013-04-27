@@ -1,26 +1,89 @@
+body {
+	background-color: #f3f8fb;
+}
+
 .container {
 	text-align: center;
 	margin: 0px auto;
-	width: 600px;
+	width: 550px;
+	height: 55px;
 	padding: 20px;
-	border: 2px dotted black;
-	background-color: #87CEEB;
+	font-family: "adelle",Georgia,Helvetica,Arial,sans-serif;
+	border: 2px;
+	background-color: #61b3de;
+	color: #444444;
+	font-size: 14px;
+	border-radius: 3px;
+
 }
 
+.container {
+	border:0;color:#fff;
+	font-style:italic;
+	padding:6px 15px 5px;
+	cursor:pointer
+}
+
+.button {
+	color:#fff;
+	background-color:#ee6123;
+	border-radius: 8px;
+	font-size: 14px;
+	border: none;
+}
+
+.blue-button {
+	font-size:16px;
+	font-weight:normal;
+	font-style:normal;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+	padding:6px 16px;
+}
 
 .popular {
 	text-align: center;
-	font-family: Georgia;
+	font-family: "adelle",Georgia,Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	color: #61b3de;
+	text-shadow:1px 1px 3px #fff;
+
+}
+
+.popular #title{
+	text-shadow:4px 4px 4px #fff;
+
+}
+
+#click-count{
+	font-size: 10px;
+	font-style:italic;
+}
+
+#short-url {
+	color: black;
+	font-size: 12px;
+	text-decoration: none;
 }
 
 h1 {
-	font-family: Georgia;
-	color: #FF6347;
+	font-size: 32px;
+	color: #ee6123;
 	text-align: center;
+	font-family: "adelle",Georgia,Helvetica,Arial,sans-serif;
+	text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
 }
 
 th {
 	text-align: left;
+}
+
+.message #link {
+	text-decoration: none;
+	color: black;
 }
 
 

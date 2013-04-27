@@ -1,29 +1,38 @@
-<h1>Skip.ly ♥</h1>
-  <div class="container">
+<body>
+  <h1>skip.ly ♥</h1>
+
+<!-- <div class="top-content cf">
+<div id="sign_up_sign_in_buttons">
+<a href="/a/sign_in" class="sign-in">Sign in</a>
+<a href="/a/sign_up" class="blue-button">Join now. It's fast &amp; free!</a>
+</div>
+</div> -->
+
+<div class="container">
     <form action="/urls" method="post">
-      <input type="text" placeholder ="Paste your long url here" name="url">
-      <input class="button" type="submit" value="Shorten">
+      <input id="shorten_url" taborder="1" class="text" type="text" placeholder ="Paste your long url here" name="url" size="35">
+      <input id="shorten_btn" class="button" type="submit" value="Shorten">
     </form>
 
-  <p><span id="new_url">
-    <% if @new_url %>
-      <% if @new_url.valid? %>
-        <p>This is your shortened url: <a href="/<%= @new_url.short_url%>" target="_blank"> skip.ly/<%= @new_url.short_url%></a></p>
-      <% else %>
-        <p><%= @new_url.errors.full_messages.first %></p>
+      <% if @new_url %>
+        <% if @new_url.valid? %>
+        <p class="message">
+          Your shortened url: <a href="/<%= @new_url.short_url%>" id="link" target="_blank"> skip.ly/<%= @new_url.short_url%></a></p>
+        <% else %>
+          <p id="error"><%= @new_url.errors.full_messages.first %></p>
+        <% end %>
       <% end %>
-    <% end %>
-  </span></p><br>
+    </p><br>
 </div>
 
 <div class="popular">
-  <h5>Most Popular:</h5>
+  <h5 id="title">Most Popular:</h5>
     <span><% @url.each do |url| %>
-      <a href="/<%= url.short_url%>" target="_blank"> skip.ly/<%= url.short_url%></a>
-      <%= url.click_count %><br>
+      <a id="short-url" href="/<%= url.short_url%>" target="_blank">skip.ly/<%= url.short_url%></a>
+      <a id="click-count"><%= url.click_count %> clicks</a><br>
     <% end %></span>
 </div>
-
+</body>
 
 
 

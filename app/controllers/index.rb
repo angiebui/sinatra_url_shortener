@@ -15,4 +15,3 @@ get '/:short_url' do
   url.increment_click!
   redirect url.url
 end
-
